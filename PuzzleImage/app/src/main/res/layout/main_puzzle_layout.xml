@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_puzzle_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.enclaveit.puzzleimage.ui.activities.MainPuzzleImage">
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txttime"
+            android:text="--:--"
+            android:textColor="#B82C38"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ImageView
+            android:id="@+id/img"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btnauto"
+            android:text="Auto"
+            android:textSize="20dp"
+            android:textColor="#FFF"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/rounded_buttona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="autoImageRandom"/>
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnext"
+            android:text="Next"
+            android:textSize="20dp"
+            android:textColor="#FFF"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/rounded_buttonb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="nextImageHuman"/>
+    </LinearLayout>
+
+</RelativeLayout>
