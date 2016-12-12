@@ -9,10 +9,19 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.enclaveit.puzzleimage.R;
+import com.example.enclaveit.puzzleimage.utils.AnimationLibrary;
+import com.example.enclaveit.puzzleimage.utils.BackgroundLibrary;
+
+import java.util.Calendar;
+import java.util.Random;
+
+import static com.example.enclaveit.puzzleimage.R.id.txttime;
 
 public class PuzzleBGActivity extends Activity {
 
     private RelativeLayout layoutPuzzle;
+    private AnimationLibrary animationEffect;
+    private BackgroundLibrary listBG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +30,8 @@ public class PuzzleBGActivity extends Activity {
         setContentView(R.layout.main_activity_background);
         initComponents();
         addBackgroundForApp();
+        autoLoadBackground();
+
     }
 
     private void configuras(){
@@ -29,6 +40,8 @@ public class PuzzleBGActivity extends Activity {
          */
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        animationEffect = new AnimationLibrary(PuzzleBGActivity.this);
+        listBG = new BackgroundLibrary();
     }
 
     private void initComponents(){
@@ -43,5 +56,32 @@ public class PuzzleBGActivity extends Activity {
                 return false;
             }
         });
+    }
+
+    private void autoLoadBackground() {
+        Thread time = new Thread() {
+            public void run() {
+                while (true){
+                    synchronized (this){
+                        try {
+                            wait(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Calendar calendar = Calendar.getInstance();
+                                if(Integer.parseInt(String.valueOf(calendar.get(Calendar.SECOND)))%2 == 0){
+                                    layoutPuzzle.setAnimation(animationEffect.slide());
+                                    layoutPuzzle.setBackgroundResource(listBG.randImage());
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        };
+        time.start();
     }
 }
