@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.enclaveit.puzzleanimation.ui.activities.PuzzleAnimation"
+    android:background="#24323D"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/fadein"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/fadeindemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/fadeout"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/fadeoutdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/crossfading"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/crossfadingdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/blink"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/blinkdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/zoomin"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/zoomout"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/rotate"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/rotatedemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/move"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/movedemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/slideup"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/slideupdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/slidedown"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/slidedowndemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/bounce"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/bouncedemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/sequential"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/sequentialdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/together"
+                android:text="Animation"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewa"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/togetherdemo"
+                android:text="Demonstration"
+                android:textSize="18dp"
+                android:textColor="#CFEAFF"
+                android:gravity="center"
+                android:background="@drawable/rounded_textviewb"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
