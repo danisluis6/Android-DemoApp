@@ -36,11 +36,11 @@ public class MainActivity extends Activity implements InterfaceView{
 //        listRow.add("tbRow4");
 //        listRow.add("tbRow5");
 
-        for (int index= 0;index < listRow.size(); index++){
-            int resIdTitle = getResources().getIdentifier(listRow.get(index), "id", getPackageName());
-            tbRow = (TableRow) this.findViewById(resIdTitle);
-            tbRow.addView(getLineHorizontal());
-        }
+//        for (int index= 0;index < listRow.size(); index++){
+//            int resIdTitle = getResources().getIdentifier(listRow.get(index), "id", getPackageName());
+//            tbRow = (TableRow) this.findViewById(resIdTitle);
+//            tbRow.addView(getLineHorizontal());
+//        }
 
     }
 
