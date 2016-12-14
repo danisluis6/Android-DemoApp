@@ -15,5 +15,5 @@ public interface IntefacePriority {
      *     return 2;
      * }
      */
-    public abstract int priority(char c);
+    public abstract int priority(String c);
 }

@@ -16,9 +16,9 @@ public interface InterfaceReversePolishNotation {
      * => analysis priority: new Stack() = "*+-"
      * => Operator * is first operation and next is addition and substraction
      */
-    public abstract String convert();
+    public abstract String convert(String expression);
     /**
-     *
+     * Step 2:
      */
 
 }
