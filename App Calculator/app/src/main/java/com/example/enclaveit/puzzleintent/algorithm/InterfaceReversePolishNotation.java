@@ -16,9 +16,11 @@ public interface InterfaceReversePolishNotation {
      * => analysis priority: new Stack() = "*+-"
      * => Operator * is first operation and next is addition and substraction
      */
-    public abstract String convert(String expression);
+    public abstract String convertToPostfix(String expression);
     /**
-     * Step 2:
+     * Step 2: Using function to distinguish
      */
+    public abstract int isOperator(String ope);
 
+    public abstract float ReversePolishNotation(String expression);
 }

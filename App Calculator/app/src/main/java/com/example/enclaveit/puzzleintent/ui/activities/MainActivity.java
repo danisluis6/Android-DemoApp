@@ -14,6 +14,8 @@ import com.example.enclaveit.puzzleintent.lib.IntefacePriority;
 import com.example.enclaveit.puzzleintent.utils.CustomFonts;
 
 import java.util.Stack;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 public class MainActivity extends Activity implements IntefacePriority,InterfaceReversePolishNotation {
 
@@ -292,6 +294,8 @@ public class MainActivity extends Activity implements IntefacePriority,Interface
             @Override
             public void onClick(View view) {
                 btResult.setAnimation(new AnimationLibrary(MainActivity.this).alpha());
+                float result = ReversePolishNotation(convertToPostfix(String.valueOf(showEnter.getText())));
+                showOperator.setText(result+"");
             }
         });
     }
@@ -302,20 +306,20 @@ public class MainActivity extends Activity implements IntefacePriority,Interface
         if(c.equals("+") || c.equals("-")){
             temp = 1;
         }
-        if(c.equals("*") || c.equals(":")){
+        if(c.equals("x") || c.equals(":")){
             temp = 2;
         }
         return temp;
     }
 
     @Override
-    public String convert(String expression) {
+    public String convertToPostfix(String expression) {
         String result = null;
         Stack<String> stack = new Stack<String>();
         for(int index = 0; index < expression.length(); index++){
             char i = expression.charAt(index);
             // if i is operator
-            if(i == '+'||i == '-'||i == '/'||i == '*')
+            if(i == '+'||i == '-'||i == ':'||i == 'x')
             {
                 if(stack.size() > 0)
                 {
@@ -337,5 +341,34 @@ public class MainActivity extends Activity implements IntefacePriority,Interface
             result += i;
         }
         return result;
+    }
+
+    @Override
+    public int isOperator(String ope){
+        if (priority(ope) == 0)
+        {
+            if (ope != "(" && ope != ")") return 0;
+            else return 1;
+        }
+        return 2;
+    }
+
+    @Override
+    public float ReversePolishNotation(String expression){
+        Stack<String> stack = null;
+        for (int i = 0; i < expression.length(); i++)
+        {
+            if (isOperator(String.valueOf(expression.charAt(i))) == 0) stack.push(String.valueOf(expression.charAt(i)));
+            else
+            {
+                float b = Float.parseFloat(stack.pop());
+                float a = Float.parseFloat(stack.pop());
+                if (String.valueOf(expression.charAt(i)) == "+") stack.push(String.valueOf(a + b));
+                else if (String.valueOf(expression.charAt(i)) == "-") stack.push(String.valueOf(a - b));
+                else if (String.valueOf(expression.charAt(i)) == "x") stack.push(String.valueOf(a * b));
+                else if (String.valueOf(expression.charAt(i)) == ":") stack.push(String.valueOf(a / b));
+            }
+        }
+        return Float.parseFloat(String.valueOf(stack.pop()));
     }
 }

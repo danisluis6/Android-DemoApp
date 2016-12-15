@@ -2,19 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.enclaveit.appcontacts">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.PuzzleImplicitIntent">
+        <activity android:name=".ui.activities.PuzzleFragment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
