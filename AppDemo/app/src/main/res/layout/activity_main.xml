@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bgf"
     tools:context="com.example.enclaveit.appdemo.ui.fragment.MainActivity">
 
     <LinearLayout
@@ -15,19 +16,28 @@
             android:id="@+id/btnFragment1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment 1" />
+            android:background="@drawable/rounded_button"
+            android:text="Fragment 1"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"/>
 
         <Button
             android:id="@+id/btnFragment2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment 2" />
+            android:background="@drawable/rounded_button"
+            android:text="Fragment 2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"/>
 
         <Button
             android:id="@+id/btnFragment3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment 1+2" />
+            android:background="@drawable/rounded_button"
+            android:text="Fragment 1+2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"/>
     </LinearLayout>
 
     <LinearLayout
