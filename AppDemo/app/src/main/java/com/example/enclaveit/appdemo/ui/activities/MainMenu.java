@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 
 import com.example.enclaveit.appcontacts.R;
+import com.example.enclaveit.appdemo.ui.fragment.MainActivity;
 import com.example.enclaveit.appdemo.ui.intent.DemoExplicitIntent;
 import com.example.enclaveit.appdemo.ui.intent.DemoImplicitIntent;
 import com.example.enclaveit.appdemo.ui.layout.TableLayoutActivity;
@@ -77,6 +78,13 @@ public class MainMenu extends Activity{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenu.this,DemoImplicitIntent.class));
+            }
+        });
+
+        categoria5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainMenu.this,MainActivity.class));
             }
         });
     }

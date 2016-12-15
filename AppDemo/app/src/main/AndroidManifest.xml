@@ -26,7 +26,8 @@
         <activity android:name="com.example.enclaveit.appdemo.ui.intent.DemoExplicitIntent" />
         <activity android:name="com.example.enclaveit.appdemo.ui.intent.DemoExplicit" />
         <activity android:name="com.example.enclaveit.appdemo.ui.layout.TableLayoutActivity" />
-        <activity android:name="com.example.enclaveit.appdemo.ui.intent.DemoImplicitIntent"></activity>
+        <activity android:name="com.example.enclaveit.appdemo.ui.intent.DemoImplicitIntent" />
+        <activity android:name="com.example.enclaveit.appdemo.ui.fragment.MainActivity"></activity>
     </application>
 
 </manifest>
