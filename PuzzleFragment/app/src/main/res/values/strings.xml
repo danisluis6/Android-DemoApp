@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">AppContacts</string>
+    <string name="app_name">DemoFragment</string>
+    <string name="dynamicUiTitle">Creating Dynamic UI with Android Fragments</string>
+    <string name="android4NewTitle">Android 4: New Features for Application Development</string>
+    <string name="android5NewTitle">Android 4: New Features for Application Development</string>
+    <string name="android6NewTitle">Android 4: New Features for Application Development</string>
+    <string name="android7NewTitle">Android 4: New Features for Application Development</string>
+    <string name="dynamicUiDescription">This book introduces readers to Fragments, the specific scenarios Fragments
+    address and how to use them. The book will take the reader from the basics of using Fragments, through their use
+    in creating more adaptive and dynamic user experiences. The book teaches readers how to capitalize on many of the
+    built - in UI Features that are available through Fragments such list-based navigation, and layout adaptation,
+    as well as how to use The activity displays a list of five book titles in the top portion of the activity. When
+    the user selects one of those books titles, the description of that book appears in the bottom portion of the
+    activity. </string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCLE</string>
 </resources>

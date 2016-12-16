@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:andriod="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_book"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.enclaveit.fragmentdemo.ui.activities.chapterone.BookActivity">
+    <!-- List of Book Titles -->
+    <ScrollView
+        android:id="@+id/scrollTitles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <RadioGroup
+            android:id="@+id/bookSelectGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/dynamicUiBook"
+                android:text="@string/dynamicUiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/android4NewBook"
+                android:text="@string/android4NewTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <RadioButton
+                android:id="@+id/android5NewBook"
+                android:text="@string/android4NewTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <RadioButton
+                android:id="@+id/android6NewBook"
+                android:text="@string/android4NewTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <RadioButton
+                android:id="@+id/android7NewBook"
+                android:text="@string/android4NewTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <!-- Other RadioButtons elided for clarify -->
+        </RadioGroup>
+    </ScrollView>
+    <!-- Description of selected book -->
+    <ScrollView
+        android:id="@+id/scrollDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/dynamicUiDescription"
+            android:id="@+id/textView"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:gravity="fill_horizontal"/>
+    </ScrollView>
+</LinearLayout>

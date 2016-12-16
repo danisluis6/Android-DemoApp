@@ -1,4 +1,4 @@
-package com.example.enclaveit.appcontacts;
+package com.example.enclaveit.fragmentdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
