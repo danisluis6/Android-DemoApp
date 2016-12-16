@@ -14,4 +14,8 @@
     activity. </string>
     <string name="ok">OK</string>
     <string name="cancel">CANCLE</string>
+
+    <!-- Activity Book Activity -->
+    <string name="step1">Custom List Book</string>
+    <string name="step2">Custom Description Book</string>
 </resources>
