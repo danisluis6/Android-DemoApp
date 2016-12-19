@@ -19,7 +19,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="PROBLEM"
+                android:text="Basic Fragment"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="60dp"
                 android:textSize="16dp"
@@ -36,7 +36,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="EXPLICIT INTENT"
+                android:text="Fragments and UI Flexibility"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="80dp"
                 android:textSize="16dp"
@@ -59,7 +59,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="LAYOUT"
+                android:text="Managing fragment layout by screen size"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="70dp"
                 android:textSize="16dp"
@@ -76,7 +76,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="IMPLICIT INTENT"
+                android:text="Defining the callback interface"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="70dp"
                 android:textSize="16dp"
@@ -99,7 +99,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="FRAGMENT"
+                android:text="Fragment Lifecycle and Specialization"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="80dp"
                 android:textSize="16dp"

@@ -12,26 +12,31 @@
             android:checked="true"
             android:id="@+id/dynamicUiBook"
             android:text="@string/dynamicUiTitle"
+            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RadioButton
             android:id="@+id/android4NewBook"
             android:text="@string/android4NewTitle"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
         <RadioButton
             android:id="@+id/android5NewBook"
             android:text="@string/android4NewTitle"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
         <RadioButton
             android:id="@+id/android6NewBook"
             android:text="@string/android4NewTitle"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
         <RadioButton
             android:id="@+id/android7NewBook"
             android:text="@string/android4NewTitle"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
         <!-- Other RadioButtons elided for clarify -->

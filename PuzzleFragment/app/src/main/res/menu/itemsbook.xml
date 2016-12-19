@@ -3,13 +3,21 @@
     <item
         android:id="@+id/one"
         android:title="@string/step1"
-        android:showAsAction="ifRoom|withText"
-        />
+        android:showAsAction="ifRoom|withText" />
 
     <item
         android:id="@+id/two"
         android:title="@string/step2"
-        android:showAsAction="ifRoom|withText"
-        />
+        android:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/three"
+        android:title="@string/step3"
+        android:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/four"
+        android:title="@string/step3"
+        android:showAsAction="ifRoom|withText" />
 
 </menu>

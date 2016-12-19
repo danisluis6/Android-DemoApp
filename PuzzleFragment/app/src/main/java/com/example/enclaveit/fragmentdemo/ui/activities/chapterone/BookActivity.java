@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -49,22 +51,135 @@ public class BookActivity extends AppCompatActivity {
 
         switch(item.getItemId()){
             case R.id.one:
-//                final Toast toast = ConfiguraToast.makeToast((Activity) context,"The new thinking – fragment-oriented","The activity-oriented user interface we currently have would be fine if all Android\n" +
-//                    "devices had the same form factor. As we've discussed, that's not the case.\n" +
-//                    "We need to partition the application user interface so that we can switch to a\n" +
-//                    "fragment-oriented approach. With proper partitioning, we can be ready to make\n" +
-//                    "some simple enhancements to our application to help it adapt to device differences.\n" +
-//                    "Let's look at some simple changes we can make that will partition our user interface.", Toast.LENGTH_LONG);
-//                toast.show();
+                final Toast toast = ConfiguraToast.makeToast((Activity) context,"Defining the layout as a reusable list","To create a fragment for the book list, we define a new layout resource file called\n" +
+                        "fragment_book_list.xml . We copy the top ScrollView element and its contents\n" +
+                        "from the activity_main.xml resource file to the fragment_book_list.xml\n" +
+                        "resource file.", Toast.LENGTH_LONG);
+                toast.show();
+                /**
+                 * Description Codeing File XML
+                     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:id="@+id/scrollTitles"
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="1">
+                     <RadioGroup
+                     android:id="@+id/bookSelectGroup"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                     <RadioButton
+                     android:checked="true"
+                     android:id="@+id/dynamicUiBook"
+                     android:text="@string/dynamicUiTitle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                     <RadioButton
+                     android:id="@+id/android4NewBook"
+                     android:text="@string/android4NewTitle"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content" />
+                     <RadioButton
+                     android:id="@+id/android5NewBook"
+                     android:text="@string/android4NewTitle"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content" />
+                     <RadioButton
+                     android:id="@+id/android6NewBook"
+                     android:text="@string/android4NewTitle"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content" />
+                     <RadioButton
+                     android:id="@+id/android7NewBook"
+                     android:text="@string/android4NewTitle"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content" />
+                     <!-- Other RadioButtons elided for clarify -->
+                     </RadioGroup>
+                     </ScrollView>
+                 *
+                 */
                 break;
             case R.id.two:
-//                final Toast toast2 = ConfiguraToast.makeToast((Activity) context,"The new thinking – fragment-oriented","The activity-oriented user interface we currently have would be fine if all Android\n" +
-//                        "devices had the same form factor. As we've discussed, that's not the case.\n" +
-//                        "We need to partition the application user interface so that we can switch to a\n" +
-//                        "fragment-oriented approach. With proper partitioning, we can be ready to make\n" +
-//                        "some simple enhancements to our application to help it adapt to device differences.\n" +
-//                        "Let's look at some simple changes we can make that will partition our user interface.", Toast.LENGTH_LONG);
-//                toast2.show();
+                final Toast toast2 = ConfiguraToast.makeToast((Activity) context,"Encapsulating the display layout","For the book description, we'll define a layout resource file called\n" +
+                        "fragment_book_desc.xml . The fragment layout includes the contents\n" +
+                        "of the activity layout resource's bottom ScrollView element (has an id\n" +
+                        "value of scrollDescription ). Just as in the book list fragment,\n" +
+                        "we'll remove the layout_weight attribute, set the layout_height\n" +
+                        "attribute to match_parent , and add the android namespace\n" +
+                        "prefix declaration.", Toast.LENGTH_LONG);
+                toast2.show();
+                /**
+                 * Description Code XML
+                     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/scrollDescription">
+                     <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textAppearance="?android:attr/textAppearanceMedium"
+                     android:text="@string/dynamicUiDescription"
+                     android:id="@+id/textView"
+                     android:paddingLeft="@dimen/activity_horizontal_margin"
+                     android:paddingRight="@dimen/activity_horizontal_margin"
+                     android:gravity="fill_horizontal"/>
+                     </ScrollView>
+                 */
+                break;
+            case R.id.three:
+                final Toast toast3 = ConfiguraToast.makeToast((Activity) context,"Converting the activity to use fragments","we'll remove all the book titles and description layout information from the\n" +
+                        "activity_main.xml layout resource file. The file now contains just the top-level\n" +
+                        "LinearLayout element and comments to show where the book titles and description", 20000);
+                toast3.show();
+                /**
+                 *   <LinearLayout
+                     android:orientation="vertical"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     xmlns:android="http://schemas.android.com/apk/res/android">
+                     <!-- List of Book Titles
+                     -->
+                     <!-- Description of selected book
+                     </LinearLayout>
+                 */
+                break;
+            case R.id.four:
+                 /**
+                  * First with Activity: We using three attribute to decorate
+                  * android:layout_width = 'match_parent'
+                  * android:layout_weight = '1'
+                  * android:layout_height = '0dp'
+                  */
+
+                 /**
+                  * Second with Acitivty: We will seprate part of activity with call
+                  * (WEBSITEL: header,footer or sidebar)
+                  * (MOBILE : fgrament)
+                  * Notice that: We remove all attribute
+                  */
+
+                  /**
+                   * MIDDLE STEP
+                   * We provide the display fragment. We will using extend Fragment and Under function onCreateView
+                   * (It's is Lifecycle Android)
+                   * public class BookDescFragment extends Fragment {
+                      @Override
+                      public View onCreateView(LayoutInflater inflater, ViewGroup
+                          container, Bundle savedInstanceState) {
+                              View viewHierarchy =
+                              inflater.inflate(R.layout.fragment_book_desc, container,
+                              false);
+                              return viewHierarchy;
+                          }
+                      }
+                   * Every fragment, will have a class java to provide display fragment.
+                   */
+
+
+                /** Final with activity =>
+                 *  Using again with 3 commnad line to completed UI and set Fragment Layout
+                 *  Thanks for researching...
+                 */
                 break;
         }
         return true;

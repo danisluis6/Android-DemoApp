@@ -18,4 +18,6 @@
     <!-- Activity Book Activity -->
     <string name="step1">Custom List Book</string>
     <string name="step2">Custom Description Book</string>
+    <string name="step3">Converting the activity to use fragments</string>
+    <string name="step4">Analysis</string>
 </resources>

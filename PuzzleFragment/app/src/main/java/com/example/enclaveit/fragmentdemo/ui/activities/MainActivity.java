@@ -1,15 +1,11 @@
 package com.example.enclaveit.fragmentdemo.ui.activities;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.example.enclaveit.fragmentdemo.R;
-import com.example.enclaveit.fragmentdemo.ui.activities.chapterone.BookActivity;
 import com.example.enclaveit.fragmentdemo.utils.ExplicitListener;
 
 public class MainActivity extends Activity {
@@ -52,5 +48,9 @@ public class MainActivity extends Activity {
 
     private void addOnListenerCall() {
         categoria1.setOnClickListener(new ExplicitListener(MainActivity.this));
+        categoria2.setOnClickListener(new ExplicitListener(MainActivity.this));
+        categoria3.setOnClickListener(new ExplicitListener(MainActivity.this));
+        categoria4.setOnClickListener(new ExplicitListener(MainActivity.this));
+        categoria5.setOnClickListener(new ExplicitListener(MainActivity.this));
     }
 }
