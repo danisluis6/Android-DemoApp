@@ -86,6 +86,7 @@
     <Button
         android:text="Login"
         android:textColor="#FFFFFF"
+        android:padding="15dp"
         android:background="@drawable/rounded_button"
         android:layout_marginTop="420dp"
         android:layout_marginLeft="35dp"
