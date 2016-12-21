@@ -3,6 +3,8 @@ package com.example.enclaveit.app_meida.ui.fragments;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -33,7 +35,8 @@ public class FragmentMenuTop extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.btnMenuTop)
-            Toast.makeText(getActivity(), "OK", Toast.LENGTH_LONG).show();
+        if(view.getId() == R.id.btnMenuTop){
+
+        }
     }
 }

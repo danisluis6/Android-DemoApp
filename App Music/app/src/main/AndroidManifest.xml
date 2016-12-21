@@ -3,7 +3,10 @@
     package="com.example.enclaveit.app_meida">
     <!-- Definition permission to using in application -->
 
-
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19"
+        />
     <!-- Running API Lower than API current can running App Android -->
     <application
         android:allowBackup="true"

@@ -1,18 +1,20 @@
 package com.example.enclaveit.app_meida.ui.activities;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.example.enclaveit.app_meida.R;
-import com.example.enclaveit.app_meida.lib.ScreenUtils;
 import com.example.enclaveit.app_meida.models.bean.Song;
 import com.example.enclaveit.app_meida.models.dao.ModelSong;
 import com.example.enclaveit.app_meida.ui.adapters.AdapterSong;
@@ -20,10 +22,10 @@ import com.example.enclaveit.app_meida.ui.adapters.AdapterSong;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity{
 
     private ListView listSong;
-    private ImageView imageSong;
+    private Toolbar toolbar;
 
     private List<Song> alSong;
 
@@ -35,8 +37,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ScreenUtils.setDisplayNoTitle(MainActivity.this);
+        // ScreenUtils.setDisplayNoTitle(MainActivity.this);
         setContentView(R.layout.activity_main);
+        initToolBar();
         initComponents();
         initVar();
         getDatabaseFromModel();
@@ -49,9 +52,23 @@ public class MainActivity extends Activity {
 
     }
 
+    private void initToolBar() {
+        toolbar = (Toolbar)this.findViewById(R.id.toolbar);
+        toolbar.setTitle("MUSICAPP");
+        this.setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(R.mipmap.ic_toolbar_arrow);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this,"Hello Toolbar",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
     private void initComponents(){
         listSong = (ListView)this.findViewById(R.id.listSong);
-        imageSong = (ImageView)this.findViewById(R.id.imageSong);
+        this.setSupportActionBar(toolbar);
 
         modelSong = new ModelSong(MainActivity.this);
     }
@@ -78,5 +95,12 @@ public class MainActivity extends Activity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_toolbar,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
