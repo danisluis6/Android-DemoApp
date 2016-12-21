@@ -46,55 +46,79 @@ public class TestSQLiteActivity extends AppCompatActivity {
 //        final String singertx = String.valueOf(singer.getText());
 //        final String lyrictx = String.valueOf(lyric.getText());
 
-        final String nametx = String.valueOf("Last Christmas");
-        final String authortx = String.valueOf("Wham!");
-        final String singertx = String.valueOf("Wham!");
-        final String lyrictx = String.valueOf("1. Once bitten and twice shy\n" +
-                "I keep my distance but you still catch my eye\n" +
-                "Tell me baby do you recognise me\n" +
-                "Well it's been a year, it doesn't surprise me.\n" +
+        final String nametx = String.valueOf("Baby");
+        final String authortx = String.valueOf("Justin Bieber; Ludacris");
+        final String singertx = String.valueOf("Justin Bieber; Ludacris");
+        final String lyrictx = String.valueOf("You know you love me, I know you care\n" +
+                "Just shout whenever, and i'll be there\n" +
+                "You are my love, you are my heart\n" +
+                "And we will never ever ever be apart.\n" +
                 "\n" +
-                "(Happy Christmas!) I wrapped it up and sent it\n" +
-                "With a note saying \"I Love You\" I meant it\n" +
-                "Now I know what a fool i've been\n" +
-                "But if you kissed me now I know you'd fool me again.\n" +
+                "Are we an item? Girl, quit playing\n" +
+                "We're just friends, what are you saying\n" +
+                "Say there's another and look right in my eyes\n" +
+                "My first love broke my heart for the first time\n" +
+                "And I was like...\n" +
                 "\n" +
                 "[Chorus:]\n" +
-                "Last Christmas, I gave you my heart\n" +
-                "But the very next day, You gave it away\n" +
-                "This year, to save me from tears\n" +
-                "I'll give it to someone special.\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine).\n" +
                 "\n" +
-                "2. A crowded room, friends with tired eyes\n" +
-                "I'm hiding from you and your soul of ice\n" +
-                "My God I thought you were someone to rely on\n" +
-                "Me? I guess I was a shoulder to cry on\n" +
-                "A face on a lover with a fire in his heart\n" +
-                "A man undercover but you tore me apart\n" +
-                "Oooh Oooh\n" +
-                "Now i've found a real love you'll never fool me again.\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine).\n" +
                 "\n" +
-                "[Coda:]\n" +
-                "A face on a lover with a fire in his heart\n" +
-                "(Gave you my heart)\n" +
-                "A man undercover but you tore me apart\n" +
-                "Next year\n" +
-                "I'll give it to someone, i'll give it to someone special\n" +
-                "Last Christmas lyrics on ChiaSeNhac.vn\n" +
-                "Special, someone, someone\n" +
-                "I'll give it to someone, i'll give it to someone special\n" +
-                "Who'll give me something in return\n" +
-                "I'll give it to someone\n" +
-                "Hold my heart and watch it burn\n" +
-                "I'll give it to someone, i'll give it to someone special\n" +
-                "I've got you here to stay\n" +
-                "I can love you for a day\n" +
-                "I thought you were someone special\n" +
-                "Gave you my heart\n" +
-                "I'll give it to someone, i'll give it to someone\n" +
-                "Last christmas I gave you my heart\n" +
-                "You gave it away\n" +
-                "I'll give it to someone, i'll give it to someone.");
+                "2. Oh, for you I would have done whatever\n" +
+                "And I just can't believe we ain't together\n" +
+                "And I wanna play it cool, but I'm losin' you\n" +
+                "I'll buy you anything, i'll buy you any ring\n" +
+                "And I'm in pieces, ibaby fix me\n" +
+                "And just shake me 'til you wake me from this bad dream\n" +
+                "I'm going down, down, down, down\n" +
+                "And I just can't believe my first love won't be around.\n" +
+                "\n" +
+                "And I'm like\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine).\n" +
+                "\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine)\n" +
+                "\n" +
+                "[Rap:]\n" +
+                "Luda! When I was 13, I had my first love,\n" +
+                "There was nobody that compared to my ibaby\n" +
+                "And nobody came between us or could ever come above\n" +
+                "She had me going crazy, oh, I was star-struck\n" +
+                "She woke me up daily, don't need no Starbucks\n" +
+                "Baby lyrics on ChiaSeNhac.vn\n" +
+                "She made my heart pound, it skipped a beat when I see her in the street and\n" +
+                "At school on the playground but I really wanna see her on the weekend\n" +
+                "She knows she got me dazing cause she was so amazing\n" +
+                "And now my heart is breaking but I just keep on saying.\n" +
+                "\n" +
+                "[Chorus:]\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine).\n" +
+                "\n" +
+                "Baby, ibaby, ibaby oooh\n" +
+                "Like ibaby, ibaby, ibaby nooo\n" +
+                "Like ibaby, ibaby, ibaby oooh\n" +
+                "I thought you'd always be mine (mine).\n" +
+                "\n" +
+                "I'm gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
+                "Now I'm all gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
+                "Now I'm all gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
+                "Now I'm all gone (gone, gone, gone)\n" +
+                "I'm gone.");
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

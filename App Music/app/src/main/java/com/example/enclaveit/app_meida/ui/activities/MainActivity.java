@@ -1,17 +1,17 @@
 package com.example.enclaveit.app_meida.ui.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.example.enclaveit.app_meida.R;
@@ -22,10 +22,12 @@ import com.example.enclaveit.app_meida.ui.adapters.AdapterSong;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ListView listSong;
     private Toolbar toolbar;
+    private DrawerLayout mDrawer;
+    private NavigationView nvDrawer;
 
     private List<Song> alSong;
 
@@ -37,11 +39,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // ScreenUtils.setDisplayNoTitle(MainActivity.this);
         setContentView(R.layout.activity_main);
         initToolBar();
         initComponents();
-        initVar();
+
+        initVarDatabase();
         getDatabaseFromModel();
         setDataForListViewByAdapter();
 
@@ -49,15 +51,13 @@ public class MainActivity extends AppCompatActivity{
          * Add event for onclick listview
          */
         addListenerListView();
-
     }
 
     private void initToolBar() {
         toolbar = (Toolbar)this.findViewById(R.id.toolbar);
-        toolbar.setTitle("MUSICAPP");
         this.setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.ic_toolbar_arrow);
+        toolbar.setNavigationIcon(R.drawable.toolbar_ic_menu);
         toolbar.setNavigationOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -68,12 +68,10 @@ public class MainActivity extends AppCompatActivity{
 
     private void initComponents(){
         listSong = (ListView)this.findViewById(R.id.listSong);
-        this.setSupportActionBar(toolbar);
-
         modelSong = new ModelSong(MainActivity.this);
     }
 
-    private void initVar(){
+    private void initVarDatabase(){
         alSong = new ArrayList<Song>();
     }
 
@@ -92,7 +90,15 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Song song = (Song) adapterView.getItemAtPosition(position);
-
+                Bundle bundle = new Bundle();
+                bundle.putString("id",String.valueOf(song.getId()));
+                bundle.putString("name",String.valueOf(song.getName()));
+                bundle.putString("singer",String.valueOf(song.getSinger()));
+                bundle.putString("author",String.valueOf(song.getAuthor()));
+                bundle.putString("lyric",String.valueOf(song.getLyric()));
+                Intent intent = new Intent(MainActivity.this,PlayMusic.class);
+                intent.putExtra("SONG",bundle);
+                startActivity(intent);
             }
         });
     }
@@ -101,6 +107,14 @@ public class MainActivity extends AppCompatActivity{
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_toolbar,menu);
+
+
+
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
