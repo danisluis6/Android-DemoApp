@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_level0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B323C"
+    tools:context="com.example.enclaveit.appdemo.ui.activities.MainMenu">
+
+    <ImageView
+        android:background="@drawable/logoskypetm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:text="WELCOME BACK"
+        android:textColor="#00AFF0"
+        android:textStyle="normal"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:text="EMAIL"
+        android:textSize="16dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:padding="10dp"
+        android:lines="1"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="18dp"
+        />
+
+    <EditText
+        android:text="PASSWORD"
+        android:textSize="16dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:padding="10dp"
+        android:lines="1"
+
+        android:drawableLeft="@drawable/pass"
+        android:drawablePadding="18dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <CheckBox
+            android:button="@drawable/checkbox_selector"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_weight="0.08" />
+
+        <TextView
+            android:text="Remember me"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="420dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:text="Don\'t have an account \?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:textColor="#00AFF0"
+            android:text="Register here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
