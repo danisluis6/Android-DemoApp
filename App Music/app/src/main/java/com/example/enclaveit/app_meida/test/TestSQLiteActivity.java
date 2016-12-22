@@ -46,79 +46,58 @@ public class TestSQLiteActivity extends AppCompatActivity {
 //        final String singertx = String.valueOf(singer.getText());
 //        final String lyrictx = String.valueOf(lyric.getText());
 
-        final String nametx = String.valueOf("Baby");
-        final String authortx = String.valueOf("Justin Bieber; Ludacris");
-        final String singertx = String.valueOf("Justin Bieber; Ludacris");
-        final String lyrictx = String.valueOf("You know you love me, I know you care\n" +
-                "Just shout whenever, and i'll be there\n" +
-                "You are my love, you are my heart\n" +
-                "And we will never ever ever be apart.\n" +
+        final String nametx = String.valueOf("See You Again");
+        final String authortx = String.valueOf("Universal (2015)");
+        final String singertx = String.valueOf("Wiz Khalifa; Charlie Puth");
+        final String lyrictx = String.valueOf("It's been a long day, without you my friend\n" +
+                "And I'll tell you all about it when I see you again\n" +
+                "We've come a long way from where we began\n" +
+                "Oh I'll tell you all about it when I see you again\n" +
+                "When I see you again.\n" +
                 "\n" +
-                "Are we an item? Girl, quit playing\n" +
-                "We're just friends, what are you saying\n" +
-                "Say there's another and look right in my eyes\n" +
-                "My first love broke my heart for the first time\n" +
-                "And I was like...\n" +
+                "[Verse 1: Wiz Khalifa]\n" +
+                "Damn, who knew\n" +
+                "All the planes we flew\n" +
+                "Good things we been through\n" +
+                "That I'd be standing right here talking to you\n" +
+                "Bout another path\n" +
+                "I know we loved to hit the road and laugh\n" +
+                "But something told me that it wouldn't last\n" +
+                "Had to switch up look at things different see the bigger picture\n" +
+                "Those were the days\n" +
+                "Hard work forever pays\n" +
+                "Now I see you in a better place.\n" +
                 "\n" +
-                "[Chorus:]\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine).\n" +
+                "[Pre-Hook: Wiz Khalifa]\n" +
+                "How could we not talk about family when family's all that we got?\n" +
+                "Everything I went through you were standing by my side\n" +
+                "And now you gon' be with me for the last ride.\n" +
                 "\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine).\n" +
+                "[Hook: Charlie Puth]\n" +
                 "\n" +
-                "2. Oh, for you I would have done whatever\n" +
-                "And I just can't believe we ain't together\n" +
-                "And I wanna play it cool, but I'm losin' you\n" +
-                "I'll buy you anything, i'll buy you any ring\n" +
-                "And I'm in pieces, ibaby fix me\n" +
-                "And just shake me 'til you wake me from this bad dream\n" +
-                "I'm going down, down, down, down\n" +
-                "And I just can't believe my first love won't be around.\n" +
+                "[Verse 2: Wiz Khalifa]\n" +
+                "First, you both go out your way\n" +
+                "And the vibe is feeling strong\n" +
+                "And what's small turned to a friendship\n" +
+                "A friendship turned to a bond\n" +
+                "See You Again lyrics on ChiaSeNhac.vn\n" +
+                "And that bond will never be broken\n" +
+                "The love will never get lost\n" +
+                "And when brotherhood come first\n" +
+                "Then the line will never be crossed\n" +
+                "Established it on our own\n" +
+                "When that line had to be drawn\n" +
+                "And that line is what we reached\n" +
+                "So remember me when i'm gone.\n" +
                 "\n" +
-                "And I'm like\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine).\n" +
+                "[Pre-Hook: Wiz Khalifa]\n" +
                 "\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine)\n" +
-                "\n" +
-                "[Rap:]\n" +
-                "Luda! When I was 13, I had my first love,\n" +
-                "There was nobody that compared to my ibaby\n" +
-                "And nobody came between us or could ever come above\n" +
-                "She had me going crazy, oh, I was star-struck\n" +
-                "She woke me up daily, don't need no Starbucks\n" +
-                "Baby lyrics on ChiaSeNhac.vn\n" +
-                "She made my heart pound, it skipped a beat when I see her in the street and\n" +
-                "At school on the playground but I really wanna see her on the weekend\n" +
-                "She knows she got me dazing cause she was so amazing\n" +
-                "And now my heart is breaking but I just keep on saying.\n" +
-                "\n" +
-                "[Chorus:]\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine).\n" +
-                "\n" +
-                "Baby, ibaby, ibaby oooh\n" +
-                "Like ibaby, ibaby, ibaby nooo\n" +
-                "Like ibaby, ibaby, ibaby oooh\n" +
-                "I thought you'd always be mine (mine).\n" +
-                "\n" +
-                "I'm gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
-                "Now I'm all gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
-                "Now I'm all gone (Yeah Yeah Yeah, Yeah Yeah Yeah)\n" +
-                "Now I'm all gone (gone, gone, gone)\n" +
-                "I'm gone.");
+                "[Bridge: Charlie Puth]\n" +
+                "So let the light guide your way, yea\n" +
+                "Hold every memory as you go\n" +
+                "And every road you take\n" +
+                "Will always lead you home\n" +
+                "Hoooooome.");
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

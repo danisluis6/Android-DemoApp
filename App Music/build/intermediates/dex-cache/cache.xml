@@ -7,8 +7,13 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
+<<<<<<< HEAD
         sha1="33ec15ec6f00f18b0825b87b93f8462d68fdfd68">
         <dex dex="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_df6ac7dd7b02e3761392ee22bb429e1302521655.jar" />
+=======
+        sha1="11d75991c481c72d94695c5106f6b8ccfaf22877">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b4300c8d2b2b165a7a81e69e8b744bd266760a75.jar" />
+>>>>>>> 56bfe778d77b544ed13ab8b573a06a8c9460469c
     </item>
     <item
         is-multidex="false"
@@ -21,6 +26,7 @@
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -31,6 +37,9 @@
     <item
         is-multidex="false"
         jar="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+=======
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+>>>>>>> 56bfe778d77b544ed13ab8b573a06a8c9460469c
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
@@ -48,6 +57,7 @@
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -58,6 +68,9 @@
     <item
         is-multidex="false"
         jar="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+=======
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+>>>>>>> 56bfe778d77b544ed13ab8b573a06a8c9460469c
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
@@ -75,6 +88,7 @@
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -162,6 +176,113 @@
         revision="25.0.1"
         sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
         <dex dex="/home/vuongluis/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_b0210dda2e188760263329396b2fb112af2c7c73.jar" />
+=======
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_626d0940564f6d54f893244a617654614dbbc7e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_2ed6591007a7f2e8f865e9555695b809ff435171.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_81b573a6ac1a5150e4822b4f253bd67c3a380651.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_8a1f84afa6ec0c70ae1fd46452de7d6a550e360e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_9f1564fae8120c846757ccceabd1115814ae88c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_908f68f6800fae4c4ebba7a2cb3ddb89cc4c7600.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_744a8a60801eaeafe53506603c45c83d70d1de8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_deba8d0fc8fa45ba6ebbc676a0e9012e9dfcff89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_0d299a960197c713448d5fb18cff3513bc25856d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6f7032ee5e278e5e41a41c449457ccf2d00b33f3">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/instant-run_41aafef63288a96ef45ca7a57feef7d8cda90bb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_0ad2dc83491c37a2db265710c065e1f69a6fd2cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/enclaveit/Desktop/Android-DemoApp/App Music/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_7fce9802b0c38da4781f6298e56fc5e39d088abc.jar" />
+>>>>>>> 56bfe778d77b544ed13ab8b573a06a8c9460469c
     </item>
     <item
         is-multidex="false"

@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.enclaveit.app_meida.R;
 import com.example.enclaveit.app_meida.models.bean.Song;
 import com.example.enclaveit.app_meida.models.dao.ModelSong;
+import com.example.enclaveit.app_meida.test.TestSQLiteActivity;
 import com.example.enclaveit.app_meida.ui.adapters.AdapterSong;
 
 import java.util.ArrayList;
@@ -42,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initToolBar();
         initComponents();
-
         initVarDatabase();
         getDatabaseFromModel();
         setDataForListViewByAdapter();
