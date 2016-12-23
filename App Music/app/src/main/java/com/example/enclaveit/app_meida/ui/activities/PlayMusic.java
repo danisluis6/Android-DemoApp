@@ -1,19 +1,34 @@
 package com.example.enclaveit.app_meida.ui.activities;
 
+import android.content.ContentUris;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.AudioManager;
+import android.media.Image;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Handler;
+import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.enclaveit.app_meida.R;
 import com.example.enclaveit.app_meida.lib.LibraryString;
+import com.example.enclaveit.app_meida.models.bean.SongLibrary;
+
+import java.io.FileDescriptor;
+import java.io.IOException;
 
 public class PlayMusic extends AppCompatActivity implements View.OnClickListener{
 
@@ -22,12 +37,17 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
     private ImageView btnRepeat;
     private TextView timestart;
     private TextView timeend;
+    private TextView songTitle;
+    private TextView songArtist;
+
+    private ImageView picMusic;
 
     private ProgressBar progressBar;
     private Handler progressBarHandler = new Handler();
 
     private Context context = this;
     private MediaPlayer mediaPlayer;
+    private SongLibrary songLibrary = new SongLibrary();
 
 
     /**
@@ -46,7 +66,50 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         configuras();
         setContentView(R.layout.music_play);
-        mediaPlayer = setSongMusic("seeyouagain");
+
+        songTitle = (TextView)this.findViewById(R.id.songtitle);
+        songArtist = (TextView)this.findViewById(R.id.songartist);
+
+        picMusic = (ImageView)this.findViewById(R.id.picMusic);
+
+
+        /**
+         * @author: Lorence
+         * Receive data from MainActivity by Intent
+         */
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("SONG");
+        songLibrary.setId(String.valueOf(bundle.getString("id")));
+        songLibrary.setTitle(String.valueOf(bundle.getString("title")));
+        songLibrary.setAlbum(String.valueOf(bundle.getString("album")));
+        songLibrary.setArtist(String.valueOf(bundle.getString("artist")));
+        songLibrary.setDuration(Integer.parseInt(String.valueOf(bundle.getString("duration"))));
+        songLibrary.setPath(String.valueOf(bundle.getString("path")));
+        songLibrary.setAlbum_id(Long.parseLong(String.valueOf(bundle.getString("album_id"))));
+
+        /**
+         * Configuration music play
+         */
+        String xpath = songLibrary.getPath();
+
+        // mediaPlayer = setSongMusic("seeyouagain");
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        Uri uri = ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, Long.parseLong(songLibrary.getId()));
+        try {
+            mediaPlayer.setDataSource(this,uri);
+            mediaPlayer.prepareAsync();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /**
+         * Configuration Information Song
+         */
+        picMusic.setImageBitmap(getAlbumart(songLibrary.getAlbum_id()));
+        songArtist.setText(songLibrary.getArtist());
+        songTitle.setText(songLibrary.getTitle());
+
         initComponents();
         addOnListener();
     }
@@ -69,21 +132,29 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
         btnRandom = (ImageView)this.findViewById(R.id.btnRandom);
         btnRepeat = (ImageView)this.findViewById(R.id.btnRepeat);
 
+        songTitle = (TextView)this.findViewById(R.id.songtitle);
+        songArtist = (TextView)this.findViewById(R.id.songartist);
+
+        picMusic = (ImageView)this.findViewById(R.id.picMusic);
         /**
          * Time of song
          */
         timestart = (TextView)this.findViewById(R.id.timestart);
         timeend = (TextView)this.findViewById(R.id.timeend);
-
         /**
          * ProgressBar
          */
         progressBar = (ProgressBar)this.findViewById(R.id.simpleProgressBar);
         progressBar.setProgress(0);
-        progressBar.setMax(mediaPlayer.getDuration()/1000);
+        // progressBar.setMax(mediaPlayer.getDuration()/1000);
+        progressBar.setMax(songLibrary.getDuration()/1000);
     }
 
     private void addOnListener(){
+
+        timestart.setText("00:00");
+        timeend.setText(LibraryString.convertToTimeMMSS(songLibrary.getDuration()/1000));
+
         btnRandom.setOnClickListener(this);
         btnRepeat.setOnClickListener(this);
         btnPlay.setOnClickListener(this);
@@ -104,7 +175,7 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
                     progressBarStatus = 0;
                     new Thread(new Runnable() {
                         public void run() {
-                            while (progressBarStatus < (mediaPlayer.getDuration()/1000)) {
+                            while (progressBarStatus < (songLibrary.getDuration()/1000)) {
                                 // process some tasks
                                 progressBarStatus = doSomeTasks();
                                 // your computer is too fast, sleep 1 second
@@ -119,12 +190,12 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
                                         progressBar.setProgress(progressBarStatus);
                                         // Update the time
                                         timestart.setText(String.valueOf(LibraryString.convertToTimeMMSS(progressBarStatus)));
-                                        timeend.setText(String.valueOf(LibraryString.convertToTimeMMSS(mediaPlayer.getDuration()/1000-progressBarStatus)));
+                                        timeend.setText(String.valueOf(LibraryString.convertToTimeMMSS(songLibrary.getDuration()/1000-progressBarStatus)));
                                     }
                                 });
                             }
                             // Ok, Music is playing
-                            if (progressBarStatus >= (mediaPlayer.getDuration()/1000)) {
+                            if (progressBarStatus >= (songLibrary.getDuration()/1000)) {
                                 // sleep 2 seconds, so that you can see the 100%
                                 try {
                                     Thread.sleep(2000);
@@ -177,10 +248,44 @@ public class PlayMusic extends AppCompatActivity implements View.OnClickListener
      * file download simulator... a really simple
      */
     public int doSomeTasks() {
-        while (fileSize <= (mediaPlayer.getDuration()/1000)){
+        while (fileSize <= (songLibrary.getDuration()/1000)){
             fileSize++;
             return (int)fileSize;
         }
-        return (mediaPlayer.getDuration()/1000);
+        return (songLibrary.getDuration()/1000);
+    }
+
+    public Bitmap getAlbumart(Long album_id)
+    {
+        Bitmap bm = null;
+        try
+        {
+            final Uri sArtworkUri = Uri.parse("content://media/external/audio/albumart");
+
+            Uri uri = ContentUris.withAppendedId(sArtworkUri, album_id);
+
+            ParcelFileDescriptor pfd = context.getContentResolver()
+                    .openFileDescriptor(uri, "r");
+
+            if (pfd != null)
+            {
+                FileDescriptor fd = pfd.getFileDescriptor();
+                bm = BitmapFactory.decodeFileDescriptor(fd);
+            }
+        } catch (Exception e) {
+        }
+        return bm;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            if (mediaPlayer != null) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

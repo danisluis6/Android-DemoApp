@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.enclaveit.app_meida.R;
 import com.example.enclaveit.app_meida.lib.EdittextUtils;
 import com.example.enclaveit.app_meida.models.bean.Song;
+import com.example.enclaveit.app_meida.models.bean.SongLibrary;
 
 import java.util.List;
 
@@ -20,12 +21,13 @@ import java.util.List;
 
 public class AdapterSong extends BaseAdapter{
 
-    private List<Song> listItems;
+    // private List<Song> listItems;
+    private List<SongLibrary> listItems;
     private LayoutInflater layoutInflater;
     private Context context;
 
 
-    public AdapterSong(Context context,List<Song> listItems){
+    public AdapterSong(Context context,List<SongLibrary> listItems){
         this.context = context;
         this.listItems = listItems;
         layoutInflater = LayoutInflater.from(context);
@@ -52,7 +54,7 @@ public class AdapterSong extends BaseAdapter{
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
-        Song song = (Song) getItem(i);
+        SongLibrary song = (SongLibrary) getItem(i);
         if (view == null) {
             view = layoutInflater.inflate(R.layout.item_listview_song, null);
             holder = new ViewHolder();
@@ -64,9 +66,8 @@ public class AdapterSong extends BaseAdapter{
             holder = (ViewHolder) view.getTag();
         }
 
-
-        holder.name.setText(song.getName());
-        holder.singer.setText(song.getSinger());
+        holder.name.setText(song.getTitle());
+        holder.singer.setText(song.getArtist());
         return view;
     }
 
