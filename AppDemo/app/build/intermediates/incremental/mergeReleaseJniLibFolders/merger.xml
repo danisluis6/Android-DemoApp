@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/vuongluis/Desktop/Android-DemoApp/AppDemo/app/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/home/vuongluis/Desktop/Android-DemoApp/AppDemo/app/src/release/jniLibs"/></dataSet></merger>
