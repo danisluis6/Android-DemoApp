@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initToolBar();
         initComponents();
+//        this.startActivity(new Intent(MainActivity.this,TestSQLiteActivity.class));
         initVarDatabase();
         getDatabaseFromModel();
         setDataForListViewByAdapter();
