@@ -8,14 +8,17 @@
 ##Overview GUI App IMuzik
 
 <p align="center">
-  <img src="https://github.com/danisluis6/Android-External-Libraries/blob/master/SourcesCode/1.png">
+  <img src="https://github.com/danisluis6/Android-DemoApp/blob/master/App%20Music/1.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/danisluis6/Android-External-Libraries/blob/master/SourcesCode/2.png">
+  <img src="https://github.com/danisluis6/Android-DemoApp/blob/master/App%20Music/2.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/danisluis6/Android-External-Libraries/blob/master/SourcesCode/3.png">
+  <img src="https://github.com/danisluis6/Android-DemoApp/blob/master/App%20Music/3.png">
 </p>
 
+<p align="center">
+  <img src="https://github.com/danisluis6/Android-DemoApp/blob/master/App%20Music/4.png">
+</p>
