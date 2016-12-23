@@ -23,5 +23,4 @@
         <activity android:name=".ui.activities.PlayMusic" />
         <activity android:name=".test.TestReadMusicRoot"></activity>
     </application>
-
 </manifest>

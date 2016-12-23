@@ -17,6 +17,8 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -60,6 +62,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /**
+         * Requirement Permission Android
+         * Open a Dialog using the code below
+         */
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WAKE_LOCK,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+        },1);
+
         setContentView(R.layout.activity_main);
         initToolBar();
         initComponents();
@@ -138,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("AUDIO","ARTIST: "+artist);
             Log.d("AUDIO","DURATION: "+duration);
             Log.d("AUDIO","IMAGE: "+bitmap);
-            Log.d("","---------------------------");
+            Log.d("","-----------------------");
             index++;
         }
 
@@ -188,7 +200,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
     }
 
     public Bitmap getAlbumart(Long album_id)
@@ -215,7 +226,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case 1: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                } else {
+                    Toast.makeText(MainActivity.this, "Permission denied on this device!", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+        }
     }
-
 }
